@@ -43,10 +43,9 @@ public class DialogueManager : MonoBehaviour
 
         if (Timer.Instance is Timer)
             Timer.Instance.StopTimer();
-        if (ControlButtons.Instance is ControlButtons)
-            ControlButtons.Instance.moveable = false;
         if (LevelUI.Instance is LevelUI)
             LevelUI.Instance.HideUI();
+        Hadrona.Moveable = false;
         NextReplique();
         return true;
     }
@@ -69,10 +68,9 @@ public class DialogueManager : MonoBehaviour
         dialogueWindow.SetActive(false);
         if (Timer.Instance is Timer)
             Timer.Instance.StartTimer();
-        if (ControlButtons.Instance is ControlButtons)
-            ControlButtons.Instance.moveable = true;
         if (LevelUI.Instance is LevelUI)
             LevelUI.Instance.ShowUI();
+        Hadrona.Moveable = true;
         dialogueEndEvent.Invoke();
     }
 }

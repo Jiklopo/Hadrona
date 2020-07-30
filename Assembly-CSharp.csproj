@@ -81,7 +81,6 @@
     <Compile Include="Assets\Scripts\Other\DontDestroyOnLoad.cs" />
     <Compile Include="Assets\Scripts\Other\LoadSceneOnStart.cs" />
     <Compile Include="Assets\Scripts\Portal.cs" />
-    <Compile Include="Assets\Scripts\UI\ControlButtons.cs" />
     <Compile Include="Assets\Scripts\UI\GameMenu.cs" />
     <Compile Include="Assets\Scripts\UI\LevelListGenerator.cs" />
     <Compile Include="Assets\Scripts\UI\LevelSelectButton.cs" />

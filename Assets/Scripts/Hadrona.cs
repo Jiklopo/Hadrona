@@ -5,19 +5,21 @@ using UnityEngine.Tilemaps;
 
 public class Hadrona : MonoBehaviour
 {
+    public static Hadrona ActiveHadrona => ActiveHadronaManager.Instance.ActiveHadrona;
+    public static bool Moveable = true;
     private static Stack<Hadrona> moveOrder = new Stack<Hadrona>();
 
     private Stack<Vector3Int> moves = new Stack<Vector3Int>();
-    private float step = 1.28f;
     private Light2D selectLight;
+    private Tilemap obstacles;
+    private float step = 1.28f;
 
     [SerializeField] private Tile trailTile;
-    private Tilemap obstacles;
     public Color Color { get; private set; }
-    public static Hadrona ActiveHadrona => ActiveHadronaManager.Instance.ActiveHadrona;
 
     private void Awake()
     {
+        Moveable = true;
         Color = ColorManager.GetHadronaColor();
         selectLight = GetComponent<Light2D>();
         obstacles = GameObject.Find("Obstacles").GetComponent<Tilemap>();
@@ -43,7 +45,7 @@ public class Hadrona : MonoBehaviour
 
     public void Move(Vector3Int direction)
     {
-        if (direction.magnitude < 1)
+        if (!Moveable || direction.magnitude < 1)
             return;
 
         Vector3Int cellPos = obstacles.WorldToCell(transform.position);
