@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -16,8 +17,6 @@ public class CameraController : MonoBehaviour
     private float MinY => minY + camera.orthographicSize / 2;
     private float MaxY => maxY - camera.orthographicSize / 2;
     private GraphicRaycaster raycaster;
-    private bool isMobile;
-    private Vector2 lastMousePos;
     private void Awake()
     {
         if (camera == null)
@@ -25,7 +24,6 @@ public class CameraController : MonoBehaviour
         raycaster = GetComponentInChildren<GraphicRaycaster>();
         zoomSlider.maxValue = maxCameraSize;
         zoomSlider.minValue = minCameraSize;
-        isMobile = Application.isMobilePlatform;
     }
 
     private void Start()
@@ -35,51 +33,45 @@ public class CameraController : MonoBehaviour
 
     void Update()
     {
-        Vector2 translation = Vector2.zero;
-        if (isMobile)
-            translation = GetMobileTranslation();
-        if (!isMobile && Input.GetMouseButtonDown(0))
-            lastMousePos = camera.ScreenToWorldPoint(Input.mousePosition);
-        if (!isMobile && Input.GetMouseButton(0))
-            translation = GetPCTranslation(Input.mousePosition);
+        int touchCount = Input.touchCount;
+        if (touchCount == 1)
+            Move();
+        else if (touchCount == 2)
+            Zoom();
+    }
 
-        if (translation.Equals(Vector2.zero))
+
+    private void Move()
+    {
+        Touch touch = Input.GetTouch(0);
+
+        if (RaycastAnyone(touch.position))
             return;
-        
+
+        Vector2 curPos = camera.ScreenToWorldPoint(touch.position);
+        Vector2 prevPos = camera.ScreenToWorldPoint(touch.position - touch.deltaPosition);
+        Vector2 difference = prevPos - curPos;
+
         camera.transform.position = new Vector3(
-                Mathf.Clamp(camera.transform.position.x + translation.x, MinX, MaxX),
-                Mathf.Clamp(camera.transform.position.y + translation.y, MinY, MaxY),
+                Mathf.Clamp(camera.transform.position.x + difference.x, MinX, MaxX),
+                Mathf.Clamp(camera.transform.position.y + difference.y, MinY, MaxY),
                 camera.transform.position.z
                 );
     }
 
-    private Vector2 GetMobileTranslation()
+    private void Zoom()
     {
-        int touchCount = Input.touchCount;
-        if (touchCount == 0)
-            return Vector2.zero;
+        Touch t0 = Input.GetTouch(0);
+        Touch t1 = Input.GetTouch(1);
 
-        Touch touch = Input.GetTouch(0); 
+        Vector2 prevT0Pos = t0.position - t0.deltaPosition;
+        Vector2 prevT1Pos = t1.position - t1.deltaPosition;
 
-        if (RaycastAnyone(touch.position))
-            return Vector2.zero;
+        float distance = camera.ScreenToWorldPoint(t0.position - t1.position).magnitude;
+        float prevDistance = camera.ScreenToWorldPoint(prevT0Pos - prevT1Pos).magnitude;
 
-        if (touch.phase == TouchPhase.Moved)
-        {
-            Vector2 curPos = camera.ScreenToWorldPoint(touch.position);
-            Vector2 prevPos = camera.ScreenToWorldPoint(touch.position - touch.deltaPosition);
-            Vector2 difference = prevPos - curPos;
-            return difference;
-        }
-        return Vector2.zero;
-    }
-
-    private Vector2 GetPCTranslation(Vector2 position)
-    {
-        Vector2 curPos = camera.ScreenToWorldPoint(position);
-        Vector2 difference = lastMousePos - curPos;
-        lastMousePos = curPos;
-        return difference;
+        camera.orthographicSize += (distance - prevDistance);
+        camera.orthographicSize = Mathf.Clamp(camera.orthographicSize, minCameraSize, maxCameraSize);
     }
 
     private bool RaycastAnyone(Vector3 position)
@@ -90,6 +82,7 @@ public class CameraController : MonoBehaviour
         raycaster.Raycast(eventData, results);
         return results.Count != 0;
     }
+
     public void OnSliderValueChange()
     {
         camera.orthographicSize = zoomSlider.value;
