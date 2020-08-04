@@ -2,7 +2,7 @@
 
 public class LevelUI : MonoBehaviour
 {
-    [SerializeField] Canvas canvas;
+    [SerializeField] GameObject ui;
 
     public static LevelUI Instance { get; private set; }
 
@@ -13,12 +13,12 @@ public class LevelUI : MonoBehaviour
 
     public void HideUI()
     {
-        canvas.gameObject.SetActive(false);
+        ui.SetActive(false);
     }
 
     public void ShowUI()
     {
-        canvas.gameObject.SetActive(true);
+        ui.SetActive(true);
     }
 
     public void ToggleMenu()

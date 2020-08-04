@@ -8,7 +8,6 @@ using UnityEngine.UI;
 public class CameraController : MonoBehaviour
 {
     [SerializeField] Camera camera;
-    [SerializeField] Slider zoomSlider;
     [SerializeField] float maxCameraSize = 18f, minCameraSize = 5f;
     [SerializeField] float maxY = 5f, minY = -5f;
     [SerializeField] float maxX = 10f, minX = -10f;
@@ -22,13 +21,6 @@ public class CameraController : MonoBehaviour
         if (camera == null)
             camera = Camera.main;
         raycaster = GetComponentInChildren<GraphicRaycaster>();
-        zoomSlider.maxValue = maxCameraSize;
-        zoomSlider.minValue = minCameraSize;
-    }
-
-    private void Start()
-    {
-        zoomSlider.value = maxCameraSize;
     }
 
     void Update()
@@ -81,10 +73,5 @@ public class CameraController : MonoBehaviour
         List<RaycastResult> results = new List<RaycastResult>();
         raycaster.Raycast(eventData, results);
         return results.Count != 0;
-    }
-
-    public void OnSliderValueChange()
-    {
-        camera.orthographicSize = zoomSlider.value;
     }
 }
