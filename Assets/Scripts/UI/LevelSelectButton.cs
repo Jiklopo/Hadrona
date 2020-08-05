@@ -6,7 +6,8 @@ using UnityEngine;
 public class LevelSelectButton : MonoBehaviour
 {
     public int sceneIndex;
-    [SerializeField] private TextMeshProUGUI textMeshPro;
+    [SerializeField] private LevelResults results;
+    [SerializeField] private TextMeshProUGUI nameText, recordText;
     public void LoadLevel()
     {
         LevelManager.Instance.LoadLevel(sceneIndex);
@@ -14,6 +15,15 @@ public class LevelSelectButton : MonoBehaviour
 
     public void SetText(string text)
     {
-        textMeshPro.text = text;
+        nameText.text = text;
+    }
+
+    public void SetRecordText()
+    {
+        float record = results.GetResult(sceneIndex);
+        if (record == 0)
+            recordText.text = "Not played yet";
+        else
+            recordText.text = Timer.FormatTime(record);
     }
 }

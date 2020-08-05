@@ -33,6 +33,7 @@ public class ActiveHadronaManager : MonoBehaviour
             hadronas[0].Select();
             return;
         }
+        ResultsManager.Instance.FinishLevel();
         LevelManager.Instance.NextLevel();
     }
 

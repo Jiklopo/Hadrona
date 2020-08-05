@@ -12,6 +12,7 @@ public class LevelListGenerator : MonoBehaviour
             LevelSelectButton button = Instantiate(buttonPrefab, transform);
             button.sceneIndex = i + 3;
             button.SetText((i+1).ToString());
+            button.SetRecordText();
         }
     }
 }

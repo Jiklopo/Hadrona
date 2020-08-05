@@ -4,7 +4,7 @@ using UnityEngine;
 public class Timer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI timerText;
-    private float time = 0;
+    public float time { get; private set; } = 0;
     
     [SerializeField] private bool stopped;
     public static Timer Instance { get; private set; }
@@ -19,9 +19,7 @@ public class Timer : MonoBehaviour
         if (!stopped)
         {
             time += Time.deltaTime;
-            int minutes = (int)time / 60;
-            string seconds = string.Format("{0:0.00}", time - minutes * 60);
-            timerText.text = minutes + ":" + seconds;
+            timerText.text = FormatTime(time);
         }
     }
 
@@ -33,5 +31,12 @@ public class Timer : MonoBehaviour
     public void StopTimer()
     {
         stopped = true;
+    }
+
+    public static string FormatTime(float time)
+    {
+        int minutes = (int)time / 60;
+        string seconds = string.Format("{0:0.00}", time - minutes * 60);
+        return minutes + ":" + seconds;
     }
 }
