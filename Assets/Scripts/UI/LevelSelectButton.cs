@@ -22,7 +22,7 @@ public class LevelSelectButton : MonoBehaviour
     {
         float record = results.GetResult(sceneIndex);
         if (record == 0)
-            recordText.text = "Not played yet";
+            recordText.text = "N/P";
         else
             recordText.text = Timer.FormatTime(record);
     }

@@ -12,4 +12,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a7db7e923bebe74f871f0f88fe9074b, type: 3}
   m_Name: Level Stats
   m_EditorClassIdentifier: 
-  results: []
+  results:
+  - buildIndex: 3
+    twoStarTime: 0
+    threeStarTime: 0
+    time: 0
+  - buildIndex: 4
+    twoStarTime: 0
+    threeStarTime: 0
+    time: 0
+  - buildIndex: 5
+    twoStarTime: 0
+    threeStarTime: 0
+    time: 0
+  - buildIndex: 6
+    twoStarTime: 0
+    threeStarTime: 0
+    time: 0
+  - buildIndex: 7
+    twoStarTime: 0
+    threeStarTime: 0
+    time: 0
+  - buildIndex: 8
+    twoStarTime: 0
+    threeStarTime: 0
+    time: 0
+  - buildIndex: 9
+    twoStarTime: 0
+    threeStarTime: 0
+    time: 0
+  - buildIndex: 10
+    twoStarTime: 0
+    threeStarTime: 0
+    time: 0
+  - buildIndex: 11
+    twoStarTime: 0
+    threeStarTime: 0
+    time: 0
+  - buildIndex: 12
+    twoStarTime: 0
+    threeStarTime: 0
+    time: 0

@@ -196,6 +196,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3433509722569502251, guid: 0753b96bf9bfbf043bac434d5d1b1b4e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -68.799805
+      objectReference: {fileID: 0}
     - target: {fileID: 4553066758673823722, guid: 0753b96bf9bfbf043bac434d5d1b1b4e,
         type: 3}
       propertyPath: m_RootOrder
@@ -391,6 +396,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7308666491610602912, guid: 0753b96bf9bfbf043bac434d5d1b1b4e,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 103.42432
+      objectReference: {fileID: 0}
     - target: {fileID: 7308666491610602918, guid: 0753b96bf9bfbf043bac434d5d1b1b4e,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -435,39 +445,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameMenu
-      objectReference: {fileID: 0}
-    - target: {fileID: 4759745551956146598, guid: e2a0f643797e8544e80ac1865f16d6c5,
-        type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91,
-        type: 2}
-    - target: {fileID: 4759745551956146598, guid: e2a0f643797e8544e80ac1865f16d6c5,
-        type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5791149212754606684, guid: e2a0f643797e8544e80ac1865f16d6c5,
-        type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91,
-        type: 2}
-    - target: {fileID: 5791149212754606684, guid: e2a0f643797e8544e80ac1865f16d6c5,
-        type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8347032918480594530, guid: e2a0f643797e8544e80ac1865f16d6c5,
-        type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 5302535af1044152a457ed104f1f4b91,
-        type: 2}
-    - target: {fileID: 8347032918480594530, guid: e2a0f643797e8544e80ac1865f16d6c5,
-        type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9127503445643633449, guid: e2a0f643797e8544e80ac1865f16d6c5,
         type: 3}
