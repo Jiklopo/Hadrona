@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -21,6 +20,7 @@ public class CameraController : MonoBehaviour
         if (camera == null)
             camera = Camera.main;
         raycaster = GetComponentInChildren<GraphicRaycaster>();
+        camera.orthographicSize = maxCameraSize;
     }
 
     void Update()
@@ -62,7 +62,7 @@ public class CameraController : MonoBehaviour
         float distance = camera.ScreenToWorldPoint(t0.position - t1.position).magnitude;
         float prevDistance = camera.ScreenToWorldPoint(prevT0Pos - prevT1Pos).magnitude;
 
-        camera.orthographicSize += (distance - prevDistance);
+        camera.orthographicSize -= (distance - prevDistance);
         camera.orthographicSize = Mathf.Clamp(camera.orthographicSize, minCameraSize, maxCameraSize);
     }
 

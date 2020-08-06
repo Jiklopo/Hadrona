@@ -538,7 +538,7 @@ PrefabInstance:
     - target: {fileID: 719936623440682967, guid: 7cf35008281fa724783c12dff242bc74,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 719936623440682967, guid: 7cf35008281fa724783c12dff242bc74,
         type: 3}
@@ -1651,7 +1651,7 @@ PrefabInstance:
     - target: {fileID: 6232618146606268874, guid: fcdfacd110677444388b7f6b0c9f5e2c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6232618146606268874, guid: fcdfacd110677444388b7f6b0c9f5e2c,
         type: 3}
@@ -1896,75 +1896,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 183d8b928b08f7445914cce7e6299066, type: 3}
---- !u!1001 &1214964663
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 7833883183831515209, guid: 956d572aeaecb10438962f4f93137fe7,
-        type: 3}
-      propertyPath: m_Name
-      value: DialogueManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 7833883183831515211, guid: 956d572aeaecb10438962f4f93137fe7,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7833883183831515211, guid: 956d572aeaecb10438962f4f93137fe7,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7833883183831515211, guid: 956d572aeaecb10438962f4f93137fe7,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7833883183831515211, guid: 956d572aeaecb10438962f4f93137fe7,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7833883183831515211, guid: 956d572aeaecb10438962f4f93137fe7,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7833883183831515211, guid: 956d572aeaecb10438962f4f93137fe7,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7833883183831515211, guid: 956d572aeaecb10438962f4f93137fe7,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7833883183831515211, guid: 956d572aeaecb10438962f4f93137fe7,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7833883183831515211, guid: 956d572aeaecb10438962f4f93137fe7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7833883183831515211, guid: 956d572aeaecb10438962f4f93137fe7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7833883183831515211, guid: 956d572aeaecb10438962f4f93137fe7,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 956d572aeaecb10438962f4f93137fe7, type: 3}
 --- !u!1001 &1245851991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4695,7 +4626,7 @@ PrefabInstance:
     - target: {fileID: 719936623440682967, guid: 7cf35008281fa724783c12dff242bc74,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 719936623440682967, guid: 7cf35008281fa724783c12dff242bc74,
         type: 3}
@@ -5023,7 +4954,7 @@ Transform:
   - {fileID: 2120976789}
   - {fileID: 1838298317}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &2061543066 stripped
 Transform:
@@ -5081,7 +5012,7 @@ PrefabInstance:
     - target: {fileID: 6232618146606268874, guid: fcdfacd110677444388b7f6b0c9f5e2c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6232618146606268874, guid: fcdfacd110677444388b7f6b0c9f5e2c,
         type: 3}
@@ -5111,66 +5042,3 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2120976788}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &6265035318617317312
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6265035318617317319}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6265035318617317313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6265035318617317319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 919da2c87a52a7d4aa2230834cf9d2ec, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue:
-  - name: "\u0410\u0434\u0440\u043E\u043D\u0430 \u041A."
-    text: "\u041A\u0430\u0436\u0435\u0442\u0441\u044F, \u044F \u0432\u0438\u0436\u0443
-      \u0441\u0432\u043E\u044E \u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0438\u044E..."
-  dialogueEndEvent:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &6265035318617317318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6265035318617317319}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71f16f99fefea684382db060ff80b30f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1 &6265035318617317319
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 6265035318617317312}
-  - component: {fileID: 6265035318617317313}
-  - component: {fileID: 6265035318617317318}
-  m_Layer: 0
-  m_Name: DialogueInitiator
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
