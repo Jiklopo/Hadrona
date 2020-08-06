@@ -62,7 +62,7 @@ public class CameraController : MonoBehaviour
         float distance = camera.ScreenToWorldPoint(t0.position - t1.position).magnitude;
         float prevDistance = camera.ScreenToWorldPoint(prevT0Pos - prevT1Pos).magnitude;
 
-        camera.orthographicSize -= (distance - prevDistance);
+        camera.orthographicSize += (distance - prevDistance);
         camera.orthographicSize = Mathf.Clamp(camera.orthographicSize, minCameraSize, maxCameraSize);
     }
 
