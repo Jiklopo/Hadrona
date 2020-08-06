@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ResultsManager : MonoBehaviour
 {
     [SerializeField]
-    private LevelResults results;
+    private LevelStats results;
     public static ResultsManager Instance { get; private set; }
     private void Awake()
     {

@@ -6,7 +6,7 @@ using UnityEngine;
 public class LevelSelectButton : MonoBehaviour
 {
     public int sceneIndex;
-    [SerializeField] private LevelResults results;
+    [SerializeField] private LevelStats results;
     [SerializeField] private TextMeshProUGUI nameText, recordText;
     public void LoadLevel()
     {
