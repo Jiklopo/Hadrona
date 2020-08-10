@@ -1,45 +1,42 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class Door : Activateable
 {
     private Vector3Int cellPos;
     private Tilemap obstacles;
-    private SpriteRenderer renderer;
-    private AudioSource audio;
-    public bool Enabled { get; private set; }
+    private AudioSource audioSource;
+    private Animator animator;
+    public bool Enabled { get; private set; } = false;
     [SerializeField] private Tile closedDoor;
 
     private void Awake()
     {
         Enabled = false;
-        renderer = GetComponent<SpriteRenderer>();
-        audio = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
+        animator = GetComponent<Animator>();
         obstacles = GameObject.Find("Obstacles").GetComponent<Tilemap>();
     }
 
     private void Start()
     {
         cellPos = obstacles.WorldToCell(transform.position);
-        Deactivate();
+        obstacles.SetTile(cellPos, closedDoor);
     }
 
-    //Open the door
     public override void Activate()
     {
-        renderer.enabled = true;
         obstacles.SetTile(cellPos, null);
+        animator.SetBool("Opened", true);
         Enabled = true;
-        audio.Play();
+        audioSource.Play();
     }
 
-    //Close the door
     public override void Deactivate()
     {
-        renderer.enabled = false;
         obstacles.SetTile(cellPos, closedDoor);
+        animator.SetBool("Opened", false);
         Enabled = false;
-        audio.Play();
+        audioSource.Play();
     }
 }
