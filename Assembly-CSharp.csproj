@@ -76,12 +76,13 @@
     <Compile Include="Assets\Scripts\GameControllers\ResultsManager.cs" />
     <Compile Include="Assets\Scripts\GameControllers\Timer.cs" />
     <Compile Include="Assets\Scripts\Hadrona.cs" />
-    <Compile Include="Assets\Scripts\Mechanisms\Activateable.cs" />
-    <Compile Include="Assets\Scripts\Mechanisms\Button.cs" />
-    <Compile Include="Assets\Scripts\Mechanisms\Door.cs" />
+    <Compile Include="Assets\Scripts\Objects\Activateable.cs" />
+    <Compile Include="Assets\Scripts\Objects\AnimationController.cs" />
+    <Compile Include="Assets\Scripts\Objects\Button.cs" />
+    <Compile Include="Assets\Scripts\Objects\Door.cs" />
+    <Compile Include="Assets\Scripts\Objects\Portal.cs" />
     <Compile Include="Assets\Scripts\Other\DontDestroyOnLoad.cs" />
     <Compile Include="Assets\Scripts\Other\LoadSceneOnStart.cs" />
-    <Compile Include="Assets\Scripts\Portal.cs" />
     <Compile Include="Assets\Scripts\Scriptable Objects\LevelStats.cs" />
     <Compile Include="Assets\Scripts\UI\GameMenu.cs" />
     <Compile Include="Assets\Scripts\UI\LevelListGenerator.cs" />
